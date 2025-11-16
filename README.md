@@ -19,6 +19,9 @@ Example 2:
 Input: nums = [5,7,7,8,8,10], target = 6
 Output: [-1,-1]
 
+* create separate methos for finding first and last occurence
+* base condition - for first occurence if prev mid-1 is less than mid , for last occurence next value of mid + 1> mid
+
 ## Problem 2: (https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 
 Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
@@ -36,6 +39,11 @@ Output: 1
 Example 2:
 Input: [4,5,6,7,0,1,2]
 Output: 0
+Rotates Sorted array means it will be either the left sorted array or right sorted array
+Minimum will always lie on the side of unsorted arrated
+
+* if both sides are sorted array across mid, return low
+* base condition - compare it with prev mid element , then normal BS. 
 
 ## Problem 3: (https://leetcode.com/problems/find-peak-element/)
 A peak element is an element that is greater than its neighbors.
@@ -45,6 +53,8 @@ Given an input array nums, where nums[i] ≠ nums[i+1], find a peak element and 
 The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.
 
 You may imagine that nums[-1] = nums[n] = -∞.
+
+
 
 Example 1:
 
@@ -62,4 +72,5 @@ Note:
 
 Your solution should be in logarithmic complexity.
 
-
+* base condition - compare neighbors
+* move the pointer to higher side
